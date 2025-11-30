@@ -8,7 +8,7 @@ def contar_caractere(string):
             contador[caractere] = 1     
     return contador        
 
-entrada = input()
+entrada = input("dados: ")
 
 resultado = contar_caractere(entrada)
 
