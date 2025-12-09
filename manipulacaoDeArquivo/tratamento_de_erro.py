@@ -1,0 +1,16 @@
+from pathlib import Path
+
+ROOT_PATH = Path(__file__).parent
+
+try:
+    arquivo = open(ROOT_PATH / "novo-diretorio")
+except FileNotFoundError as exc:
+    print("Aquivo não encontrado!")
+    print(exc)
+except IsADirectoryError as exc:
+    print(f"Não foi possível abrir o arquivo: {exc}")    
+except IOError as exc:
+    print(f"Erro ao abrir o arquivo: {exc}")
+except Exception as exc:
+    print(f"Algun erro aconteceu ao tentar abrir o arquivo: {exc}")    
+    
